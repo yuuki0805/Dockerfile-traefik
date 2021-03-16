@@ -17,7 +17,7 @@ jobs:
       - name: Release version
         run: |
           set -e
-          echo "TRAEFIK_VERSION=$(curl -s https://api.github.com/repos/traefik/traefik/tags | jq -r '.[] | select(contains({name: "rc"})|not)' | jq -sr '.[0].name')" >> $GITHUB_ENV
+          echo "TRAEFIK_VERSION=$(curl -s https://api.github.com/repos/traefik/traefik/tags | jq -r '.[] | select(contains({name: "rc"})|not)' | jq -sr '.[0].name' | sed -e 's/v//')" >> $GITHUB_ENV
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup git
