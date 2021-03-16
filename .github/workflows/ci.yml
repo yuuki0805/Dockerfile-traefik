@@ -28,7 +28,7 @@ jobs:
       - name: Push Tag
         run: |
           set -e
-          sed -i -e "s/^ENV TRAEFIK_VERSION .*$/ENV TRAEFIK_VERSION $TRAEFIK_VERSION/" Dockerfile
+          sed -i -e "s/^ARG TRAEFIK_VERSION=\".*\"$/ARG TRAEFIK_VERSION=\"$TRAEFIK_VERSION\"/" Dockerfile
           sed -i -e "/^# traefik Version$/{n;d;}" README.md
           sed -i -e "/^# traefik Version$/a $TRAEFIK_VERSION" README.md
           git add README.md
