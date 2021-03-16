@@ -13,7 +13,7 @@ jobs:
       - name: Initialize
         run: |
           apt-get update
-          apt-get install -y curl jq
+          apt-get install -y curl jq git
       - name: Release version
         run: |
           set -e
