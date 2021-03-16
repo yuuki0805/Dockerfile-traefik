@@ -5,7 +5,7 @@ Dockerfile repo for traefik
 alpine:latest
 
 # traefik Version
-
+2.4.7
 
 # Docker Hub repository
 [yuuki0805/traefik](https://hub.docker.com/r/yuuki0805/traefik)
