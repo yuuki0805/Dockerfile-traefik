@@ -1,5 +1,5 @@
 FROM alpine:latest
-ARG TRAEFIK_VERSION="2.4.7"
+ARG TRAEFIK_VERSION="2.4.8"
 RUN apk --no-cache add ca-certificates tzdata && \
     set -ex && \
     Arch="$(apk --print-arch)" && \
